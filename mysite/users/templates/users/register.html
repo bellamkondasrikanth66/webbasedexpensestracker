@@ -1,0 +1,29 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="flex flex-col justify-center items-center min-h-screen">
+  <h1 class="font-bold text-lg">Register</h1>
+  <form class="shadow-lg p-10" method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="mb-2">
+      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+      <div class="border rounder py-2 px-2 mr-10">
+        {{ field }}
+        {% if field.errors %}
+        <ul class="errors">
+          {% for error in field.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+    <button style="background-color: #e67e22;" class="text-white px-4 py-2" type="submit">Register</button>
+  </form>
+  <p class="m-10">Already registered?<span><a class="text-indigo-500" href="{% url 'login' %}""> Click here</a> to login</p></span> 
+</div>
+
+{% endblock %}
