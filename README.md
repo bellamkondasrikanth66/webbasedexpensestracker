@@ -94,17 +94,21 @@ http://127.0.0.1:8000/
 
 ## 📂 Project Structure
 
-```
 webbasedexpensestracker/
-│── expenses/           # Main app
-│── templates/          # HTML templates
-│── static/             # CSS, JS, images
-│── db.sqlite3          # Database
-│── manage.py
-│── README.md
-```
-
----
+│
+├── mysite/                # Django project root
+│   │
+│   ├── myapp/             # Main expenses tracking app
+│   ├── users/             # User authentication & profiles
+│   ├── theme/             # Tailwind CSS & frontend styling
+│   ├── mysite/            # Django project settings & URLs
+│   │
+│   ├── db.sqlite3         # Default database
+│   ├── manage.py          # Django management script
+│   └── .DS_Store          # macOS system file (can be ignored)
+│
+├── README.md              # Project documentation
+└── .DS_Store              # macOS system file (can be ignored)
 
 ## ▶️ Usage
 
