@@ -1,39 +1,48 @@
 # 💰 Web-Based Expenses Tracker
 
-A **web-based expenses tracker** built with **Python and Django** that helps users track, manage, and analyze their personal expenses efficiently through a clean and responsive interface.
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Django](https://img.shields.io/badge/Django-3.x-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-This project is ideal for learning Django full‑stack development and personal finance management concepts.
+A **web-based expenses tracker** built with **Python and Django** that helps users track, manage, and analyze their personal expenses through a clean and responsive interface.
+
+This project is ideal for learning **full-stack development with Django** and personal finance management concepts.
 
 ---
 
 ## 🚀 Features
 
-* ✅ Add, edit, and delete expenses
-* 📊 Categorize expenses (Food, Travel, Shopping, etc.)
-* 🔐 User authentication (Register/Login/Logout)
-* 📈 Dashboard to view spending insights
-* 📅 Track expense history
-* 📱 Responsive UI using Tailwind CSS
+- ✅ Add, edit, and delete expenses  
+- 📊 Categorize expenses (Food, Travel, Shopping, etc.)  
+- 🔐 User authentication (Register / Login / Logout)  
+- 📈 Dashboard to view spending insights  
+- 📅 Track expense history  
+- 📱 Responsive UI using Tailwind CSS  
 
 ---
 
 ## 🛠️ Tech Stack
 
 **Backend**
-
-* Python
-* Django
+- Python
+- Django
 
 **Frontend**
-
-* HTML
-* CSS
-* Tailwind CSS
-* JavaScript
+- HTML
+- CSS
+- Tailwind CSS
+- JavaScript
 
 **Database**
+- SQLite (default Django DB – can be changed to PostgreSQL/MySQL)
 
-* SQLite (default Django DB – can be changed to PostgreSQL/MySQL)
+---
+
+## 📦 Requirements
+
+- Python 3.8+
+- Django 3.x+
+- Node.js (optional for Tailwind build tools)
 
 ---
 
@@ -42,19 +51,16 @@ This project is ideal for learning Django full‑stack development and personal 
 ```
 webbasedexpensestracker/
 │
-├── mysite/                    # Django project root
-│   │
-│   ├── myapp/                 # Main expenses tracking app
-│   ├── users/                 # User authentication & profiles
-│   ├── theme/                 # Tailwind CSS and UI styling
-│   ├── mysite/                # Django settings, URLs, config
-│   │
-│   ├── db.sqlite3             # Default database
-│   ├── manage.py              # Django management script
-│   └── .DS_Store              # macOS system file (ignore)
+├── mysite/                 # Django project root
+│   ├── myapp/              # Expenses tracking app
+│   ├── users/              # User authentication & profiles
+│   ├── theme/              # Tailwind CSS setup
+│   ├── mysite/             # Django settings & URLs
+│   └── manage.py
 │
-├── README.md                  # Project documentation
-└── .DS_Store                  # macOS system file (ignore)
+├── requirements.txt
+├── README.md
+└── screenshots/            # App screenshots
 ```
 
 ---
@@ -64,30 +70,18 @@ webbasedexpensestracker/
 Follow these steps to run the project locally.
 
 ### 1️⃣ Clone the repository
-
 ```bash
 git clone https://github.com/bellamkondasrikanth66/webbasedexpensestracker.git
-cd webbasedexpensestracker/mysite
+cd webbasedexpensestracker
 ```
 
 ### 2️⃣ Create a virtual environment
 
 ```bash
-python -m venv venv
-```
-
-Activate it:
-
-**Windows**
-
-```bash
-venv\\Scripts\\activate
-```
-
-**Mac/Linux**
-
-```bash
-source venv/bin/activate
+python3 -m venv venv
+source venv/bin/activate     # Mac/Linux
+# OR
+venv\Scripts\activate        # Windows
 ```
 
 ### 3️⃣ Install dependencies
@@ -96,11 +90,10 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-*(If requirements.txt not present, install Django manually: `pip install django`)*
-
 ### 4️⃣ Run migrations
 
 ```bash
+cd mysite
 python manage.py migrate
 ```
 
@@ -127,7 +120,7 @@ http://127.0.0.1:8000/
 ## ▶️ Usage
 
 1. Register or login
-2. Add your expenses with category & amount
+2. Add expenses with category & amount
 3. View expense history
 4. Analyze spending using dashboard
 5. Manage expenses anytime
@@ -136,13 +129,17 @@ http://127.0.0.1:8000/
 
 ## 📸 Screenshots
 
-*(Add screenshots here to showcase your UI)*
+### Registration Page
+![Registration](screenshots/registration.png)
 
-Example:
+### Login Page
+![Login](screenshots/login.png)
 
-```
-![Dashboard Screenshot](screenshots/dashboard.png)
-```
+### Add Expense Page
+![Add Expense](screenshots/add-expense.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
 
 ---
 
@@ -186,4 +183,6 @@ GitHub: [https://github.com/bellamkondasrikanth66](https://github.com/bellamkond
 
 ## ⭐ Support
 
-If you like this project, please ⭐ star the repository and share it!
+If you like this project, please ⭐ star the repository!
+
+---
